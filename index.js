@@ -12,7 +12,7 @@ mongodb.initDb((err) => {
         console.log(err);
     } else {
         // Routes
-        app.use('/', require('./routes-folder/routes.js'));
+        app.use('/', require('./routes/contacts.js'));
         
         app.listen(PORT, () => {
             console.log(`Web Server is listening at port ${PORT}`);

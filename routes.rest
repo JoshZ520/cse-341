@@ -1,0 +1,13 @@
+### Test home route
+GET http://localhost:3000/
+
+### Get all contacts
+GET http://localhost:3000/contacts
+
+### Get single contact by ID
+# Replace the ID below with an actual _id from your MongoDB database
+GET http://localhost:3000/contacts/696ab0de8c3e81cd94be7bb3
+
+### Production URLs (uncomment and update when deployed to Render)
+# GET https://your-app-name.onrender.com/contacts
+# GET https://your-app-name.onrender.com/contacts/YOUR_CONTACT_ID_HERE

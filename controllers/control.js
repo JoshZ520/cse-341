@@ -1,11 +1,12 @@
 const mongodb = require('../db/connect');
+const { ObjectId } = require('mongodb');
 
 const getHome = (req, res) => {
-    res.send("Meghan Zobrist");
+    res.send("Josh Zobrist");
 };
 
-// Example function to get all documents from a collection
-const getAllData = async (req, res) => {
+// Get all contacts
+const getAllContacts = async (req, res) => {
     try {
         const db = mongodb.getDatabase();
         const result = await db.collection('Contacts').find().toArray();
@@ -15,4 +16,21 @@ const getAllData = async (req, res) => {
     }
 };
 
-module.exports = { getHome, getAllData };
+// Get single contact by ID
+const getSingleContact = async (req, res) => {
+    try {
+        const contactId = req.params.id;
+        const db = mongodb.getDatabase();
+        const result = await db.collection('Contacts').findOne({ _id: new ObjectId(contactId) });
+        
+        if (!result) {
+            res.status(404).json({ error: 'Contact not found' });
+        } else {
+            res.json(result);
+        }
+    } catch (err) {
+        res.status(500).json({ error: err.message });
+    }
+};
+
+module.exports = { getHome, getAllContacts, getSingleContact };
