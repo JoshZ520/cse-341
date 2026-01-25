@@ -63,7 +63,7 @@ Content-Type: application/json
 
 ### Update a contact (PUT - Production)
 # Replace the ID below with an actual _id from your MongoDB database
-PUT https://cse-341-qtoj.onrender.com/contacts/69767b3914d9631a71675915
+PUT https://cse-341-qtoj.onrender.com/contacts/69767db667c239c8488e3af1
 Content-Type: application/json
 
 {
@@ -76,4 +76,4 @@ Content-Type: application/json
 
 ### Delete a contact (Production)
 # Replace the ID below with an actual _id from your MongoDB database
-DELETE https://cse-341-qtoj.onrender.com/contacts/69767b3914d9631a71675915
+DELETE https://cse-341-qtoj.onrender.com/contacts/69767db667c239c8488e3af1
