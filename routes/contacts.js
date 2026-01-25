@@ -11,4 +11,13 @@ router.get('/contacts', contactsController.getAllContacts);
 // Get single contact by ID
 router.get('/contacts/:id', contactsController.getSingleContact);
 
+// Create a new contact
+router.post('/contacts', contactsController.createContact);
+
+// Update a contact by ID
+router.put('/contacts/:id', contactsController.updateContact);
+
+// Delete a contact by ID
+router.delete('/contacts/:id', contactsController.deleteContact);
+
 module.exports = router;
