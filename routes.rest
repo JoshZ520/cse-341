@@ -37,10 +37,43 @@ Content-Type: application/json
 # Replace the ID below with an actual _id from your MongoDB database
 DELETE http://localhost:3000/contacts/69767763a53737f39c772453
 
-### Production URLs (uncomment and update when deployed to Render)
+### ========== PRODUCTION URLs (Render.com) ==========
 
+### Test home route (Production)
+GET https://cse-341-qtoj.onrender.com/
+
+### Get all contacts (Production)
 GET https://cse-341-qtoj.onrender.com/contacts
 
-### comment to get the request to work
-
+### Get single contact by ID (Production)
+# Replace the ID below with an actual _id from your MongoDB database
 GET https://cse-341-qtoj.onrender.com/contacts/696ab0de8c3e81cd94be7bb3
+
+### Create a new contact (POST - Production)
+POST https://cse-341-qtoj.onrender.com/contacts
+Content-Type: application/json
+
+{
+  "firstName": "Jane",
+  "lastName": "Smith",
+  "email": "jane.smith@example.com",
+  "favoriteColor": "Blue",
+  "birthday": "1995-08-15"
+}
+
+### Update a contact (PUT - Production)
+# Replace the ID below with an actual _id from your MongoDB database
+PUT https://cse-341-qtoj.onrender.com/contacts/696ab0de8c3e81cd94be7bb3
+Content-Type: application/json
+
+{
+  "firstName": "Jane",
+  "lastName": "Smith-Updated",
+  "email": "jane.updated@example.com",
+  "favoriteColor": "Green",
+  "birthday": "1995-08-15"
+}
+
+### Delete a contact (Production)
+# Replace the ID below with an actual _id from your MongoDB database
+DELETE https://cse-341-qtoj.onrender.com/contacts/696ab0de8c3e81cd94be7bb3
