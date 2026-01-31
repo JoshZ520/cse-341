@@ -7,9 +7,14 @@ const swaggerDocument = require('./swagger.json');
 const app = express();
 
 app.use(express.json());
-app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 const PORT = process.env.PORT || 3000;
+
+// Update swagger host and scheme dynamically based on environment
+swaggerDocument.host = process.env.HOST || `localhost:${PORT}`;
+swaggerDocument.schemes = process.env.HOST ? ['https'] : ['http'];
+
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 // Initialize database and start server
 mongodb.initDb((err) => {
