@@ -23,7 +23,7 @@ Content-Type: application/json
 ### Update a contact (PUT)
 # Replace the ID below with an actual _id from your MongoDB database
 # DEMO COPY/PASTE: {"firstName": "John", "lastName": "Doe", "email": "john.doe@email.com", "favoriteColor": "Red", "birthday": "1985-03-22"}
-PUT http://localhost:3000/contacts/69767763a53737f39c772453
+PUT http://localhost:3000/contacts/696ab29c8c3e81cd94be7bb6
 Content-Type: application/json
 
 {
@@ -64,7 +64,7 @@ Content-Type: application/json
 
 ### Update a contact (PUT - Production)
 # Replace the ID below with an actual _id from your MongoDB database
-PUT https://cse-341-qtoj.onrender.com/contacts/69767db667c239c8488e3af1
+PUT https://cse-341-qtoj.onrender.com/contacts/696ab29c8c3e81cd94be7bb6
 Content-Type: application/json
 
 {
